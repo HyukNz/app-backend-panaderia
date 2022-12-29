@@ -6,6 +6,8 @@ const dbconfig = {
     user: config.mysql.user,
     password: config.mysql.password,
     database: config.mysql.database
+    // port: config.mysql.port
+    
 }
 
 function conMysql() {

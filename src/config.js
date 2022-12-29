@@ -5,7 +5,7 @@ module.exports = {
         port: process.env.PORT || 4000,
     },
     jwt:{
-        secret: process.env.JWT_SECRET || 'notasecreta!'
+        secret: process.env.JWT_SECRET || 'mauri007'
     },
 
     mysql:{
@@ -13,6 +13,7 @@ module.exports = {
         user: process.env.MYSQL_USER || 'root',
         password: process.env.MYSQL_PASSWORD || '',
         database: process.env.MYSQL_DATABASE || 'panaderia'
+        
     }
 }
     
