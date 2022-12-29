@@ -21,7 +21,7 @@ function conMysql() {
     conexion.on('error', (err) => {
         console.log('[db err]', err);
         if (err.code === 'PROTOCOL_CONNECTION_LOST') {
-            conmysql();
+            conMysql();
         } else {
             throw err;
         }
@@ -67,6 +67,7 @@ function eliminar(tabla, data) {
 }
 
 
+
 function query(tabla, consulta) {
     return new Promise((resolve, reject) => {
         conexion.query(`SELECT * FROM ${tabla} WHERE ?`, consulta, (error, result) => {
@@ -74,7 +75,6 @@ function query(tabla, consulta) {
         });
     });
 }
-
 
 
 

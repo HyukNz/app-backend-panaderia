@@ -1,13 +1,11 @@
-const db = require('../../db/mysql');
+const db = require('../../../db/mysql');
 
-const TABLA = 'clientes';
-
-
+const TABLA = 'empleado';
 
 module.exports = function (dbinyectada) {
     let db = dbinyectada;
     if (!db) {
-        db = require('../../db/mysql');
+        db = require('../../../db/mysql');
     }
 
     function todos() {
@@ -19,6 +17,8 @@ module.exports = function (dbinyectada) {
     }
 
     function agregar(body) {
+       
+
         return db.agregar(TABLA, body);
     }
 
@@ -26,9 +26,6 @@ module.exports = function (dbinyectada) {
     function eliminar(body) {
         return db.eliminar(TABLA, body);
     }
-
-
-
 
     return {
         todos,

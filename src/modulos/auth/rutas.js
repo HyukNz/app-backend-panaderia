@@ -8,7 +8,7 @@ router.get('/login', login);
 
 async function login(req, res, next) {
     try {
-        const token = await controlador.login(req.body.usuario, req.body.password);
+        const token = await controlador.login(req.body.username, req.body.password);
         respuesta.success(req, res, token, 200);
     } catch (err) {
         next(err);

@@ -1,4 +1,4 @@
-const TABLA = 'auth';
+const TABLA = 'usuario';
 const bcrypt = require('bcrypt');
 const auth  = require('../../auth');
 
@@ -8,9 +8,8 @@ module.exports = function (dbinyectada) {
         db = require('../../db/mysql');
     }
 
-
-    async function login(usuario, password) {
-        const data = await db.query(TABLA, { usuario: usuario });
+    async function login(username, password) {
+        const data = await db.query(TABLA, { username: username });
         return bcrypt.compare(password, data.password)
             .then(resultado => {
                 if (resultado) {
@@ -29,13 +28,13 @@ module.exports = function (dbinyectada) {
         const authData = {
             id: data.id,
         }
-        if (data.usuario) {
-            authData.usuario = data.usuario;
+        if (data.username) {
+            authData.username = data.username;
         }
         if (data.password) {
             authData.password = await bcrypt.hash(data.password.toString(), 5);
         }
-
+        authData.idEmpleado = data.idEmpleado;
         return db.agregar(TABLA, authData);
     }
 
