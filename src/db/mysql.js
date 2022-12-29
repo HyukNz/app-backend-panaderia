@@ -2,11 +2,11 @@ const mysql = require('mysql');
 const config = require('../config');
 
 const dbconfig = {
-    host: config.mysql.host,
-    user: config.mysql.user,
-    password: config.mysql.password,
-    database: config.mysql.database
-    // port: config.mysql.port
+    host: config.mysql.DB_HOST,
+    user: config.mysql.DB_USER,
+    password: config.mysql.DB_PASSWORD,
+    database: config.mysql.DB_NAME,
+    port: config.mysql.DB_PORT
     
 }
 
