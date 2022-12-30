@@ -1,6 +1,6 @@
 const db = require('../../../db/mysql');
 
-const TABLA = 'empleado';
+const TABLA = 'railway.empleado';
 
 module.exports = function (dbinyectada) {
     let db = dbinyectada;
