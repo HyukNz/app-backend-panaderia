@@ -7,7 +7,6 @@ const dbconfig = {
     password: config.mysql.password,
     database: config.mysql.database,
     port: config.mysql.port
-    
 }
 
 let conexion;
