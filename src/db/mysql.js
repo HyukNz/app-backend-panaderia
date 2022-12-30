@@ -10,12 +10,14 @@ const dbconfig = {
     
 }
 
+let conexion;
+
 function conMysql() {
     conexion = mysql.createConnection(dbconfig);
     conexion.connect((err) => {
         if (err) {
             console.log('[db err]', err);
-            setTimeout(conmysql, 200);
+            setTimeout(conMysql, 200);
         } else {
             console.log('db conectada!!!');
         }
