@@ -1,4 +1,4 @@
-const TABLA = 'usuario';
+const TABLA = 'USUARIO';
 const bcrypt = require('bcrypt');
 const auth = require('../../../auth');
 
