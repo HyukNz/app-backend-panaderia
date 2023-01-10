@@ -36,12 +36,9 @@ const empleadomaquinas = require('./modulos/M4.Procesos/empleadomaquina/rutas');
 const empleadoprocesos = require('./modulos/M4.Procesos/empleadoproceso/rutas');
 const ingredientes = require('./modulos/M4.Procesos/ingredientes/rutas');
 const maquinas = require('./modulos/M4.Procesos/maquinas/rutas');
-const procesoprodutos = require('./modulos/M4.Procesos/procesoproducto/rutas');
+const procesoproductos = require('./modulos/M4.Procesos/procesoproducto/rutas');
 const procesos = require('./modulos/M4.Procesos/procesos/rutas');
 const recetas = require('./modulos/M4.Procesos/recetas/rutas');
-
-
-
 
 
 const error = require('./red/errors');
