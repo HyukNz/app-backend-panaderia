@@ -1,8 +1,6 @@
 const db = require('../../../db/mysql');
 
-const TABLA = 'CARGO';
-
-
+const TABLA = 'PROCESO';
 
 module.exports = function (dbinyectada) {
     let db = dbinyectada;
@@ -19,6 +17,8 @@ module.exports = function (dbinyectada) {
     }
 
     function agregar(body) {
+       
+
         return db.agregar(TABLA, body);
     }
 
@@ -26,9 +26,6 @@ module.exports = function (dbinyectada) {
     function eliminar(body) {
         return db.eliminar(TABLA, body);
     }
-
-
-
 
     return {
         todos,

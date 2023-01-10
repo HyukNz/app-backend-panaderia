@@ -1,6 +1,6 @@
 const db = require('../../../db/mysql');
 
-const TABLA = 'CARGO';
+const TABLA = 'NOTACOMPRA';
 
 
 
