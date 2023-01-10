@@ -88,7 +88,7 @@ app.use('/api/empleadomaquinas', empleadomaquinas);
 app.use('/api/empleadoprocesos', empleadoprocesos);
 app.use('/api/ingredientes', ingredientes);
 app.use('/api/maquinas', maquinas);
-app.use('/api/procesoprodutos', procesoprodutos);
+app.use('/api/procesoprodutos', procesoproductos);
 app.use('/api/procesos', procesos);
 app.use('/api/recetas', recetas);
 
