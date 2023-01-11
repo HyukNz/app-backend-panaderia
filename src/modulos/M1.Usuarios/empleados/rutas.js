@@ -5,10 +5,12 @@ const controlador = require('./index');
 const router = express.Router();
 
 router.get('/', todos);
+router.get('/all', getemploys);
 router.get('/:id', uno);
+
 router.post('/', agregar);
 router.put('/', eliminar);
-router.get('/all', getemploys);
+
 
 async function todos(req, res, next) {
     try {
