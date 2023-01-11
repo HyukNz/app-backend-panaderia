@@ -55,7 +55,7 @@ function uno(tabla, id) {
 
 function agregar(tabla, data) {
     return new Promise((resolve, reject) => {
-        conexion.query(`INSERT INTO ${tabla} SET ? ON DUPLICATE KEY UPDATE ?`, [data,data], (error, result) => {
+        conexion.query(`INSERT INTO ${tabla} SET ? ON DUPLICATE KEY UPDATE ?`, [data, data], (error, result) => {
             return error ? reject(error) : resolve(result);
         });
     });
@@ -79,13 +79,24 @@ function query(tabla, consulta) {
     });
 }
 
-function mysql_query(tabla, consulta) {
+// function mysql_query(tabla, consulta) {
+//     return new Promise((resolve, reject) => {
+//         conexion.query(`SELECT * FROM ${tabla} WHERE ${consulta}`, (error, result) => {
+//             return error ? reject(error) : resolve(result[0]);
+//         });
+//     });
+// }
+
+
+function mysql_query(consulta) {
     return new Promise((resolve, reject) => {
-        conexion.query(`SELECT * FROM ${tabla} WHERE ${consulta}`, (error, result) => {
+        conexion.query(consulta, (error, result) => {
             return error ? reject(error) : resolve(result[0]);
         });
     });
 }
+
+
 
 
 
