@@ -26,8 +26,8 @@ module.exports = function (dbinyectada) {
         return db.eliminar(TABLA, body);
     }
 
-    function getEmploys() {
-        const consulta = "SELECT * FROM EMPLEADO,USUARIO,ROL,CARGO WHERE ROL.id = USUARIO.IdRol AND USUARIO.IdEmpleado = EMPLEADO.id AND EMPLEADO.IdCargo = CARGO.id";             
+    function getemploys() {
+        const consulta = "SELECT * FROM EMPLEADO,USUARIO,ROL,CARGO WHERE ROL.ID = USUARIO.IDROL AND USUARIO.IDEMPLEADO = EMPLEADO.ID AND EMPLEADO.IDCARGO = CARGO.ID";             
         return db.mysql_query(consulta);
     }
 
@@ -36,6 +36,6 @@ module.exports = function (dbinyectada) {
         uno,
         agregar,
         eliminar,
-        getEmploys
+        getemploys
     }
 }
