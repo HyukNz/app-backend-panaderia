@@ -29,7 +29,7 @@ module.exports = function (dbinyectada) {
 
     function getEmploys() {
         const TABLAS = 'EMPLEADO,USUARIO,ROL,CARGO';
-        const consulta = 'EMPLEADO.USUARIO_ID = USUARIO.ID AND EMPLEADO.ROL_ID = ROL.ID AND EMPLEADO.CARGO_ID = CARGO.ID';
+        const consulta = 'ROL.id = USUARIO.IdRol AND USUARIO.IdEmpleado = EMPLEADO.id AND EMPLEADO.IdCargo = CARGO.id';
                           
         return db.query(TABLAS, consulta);
     }
