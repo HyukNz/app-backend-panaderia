@@ -66,6 +66,7 @@ app.use('/api/auth', auth);
 app.use('/api/cargos', cargos);
 app.use('/api/roles', roles);
 app.use('/api/empleados', empleados);
+app.use('/api/empleados/all', empleados);
 app.use('/api/usuarios', usuarios);
 
 //rutas modulo 2 - ventas
