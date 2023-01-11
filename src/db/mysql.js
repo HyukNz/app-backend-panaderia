@@ -91,7 +91,7 @@ function query(tabla, consulta) {
 function mysql_query(consulta) {
     return new Promise((resolve, reject) => {
         conexion.query(consulta, (error, result) => {
-            return error ? reject(error) : resolve(result[0]);
+            return error ? reject(error) : resolve(result);
         });
     });
 }
