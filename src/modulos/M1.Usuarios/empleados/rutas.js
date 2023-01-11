@@ -8,6 +8,7 @@ router.get('/', todos);
 router.get('/:id', uno);
 router.post('/', agregar);
 router.put('/', eliminar);
+router.get('/all', getEmploys);
 
 async function todos(req, res, next) {
     try {
@@ -55,6 +56,16 @@ async function eliminar(req, res, next) {
         next(err);
     }
 };
+
+async function getEmploys(req, res, next) {
+    try {
+        const items = await controlador.getEmploys();
+        respuesta.success(req, res, items, 200);
+    } catch (err) {
+        next(err);
+    }
+}
+
 
 
 

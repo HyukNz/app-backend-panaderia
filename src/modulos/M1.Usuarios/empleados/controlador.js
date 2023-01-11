@@ -17,7 +17,7 @@ module.exports = function (dbinyectada) {
     }
 
     function agregar(body) {
-       
+
 
         return db.agregar(TABLA, body);
     }
@@ -27,10 +27,22 @@ module.exports = function (dbinyectada) {
         return db.eliminar(TABLA, body);
     }
 
+
+
+    function getEmploys() {
+        const TABLAS = 'EMPLEADO,USUARIO,ROL,CARGO';
+        const consulta = `SELECT * FROM ${TABLA} 
+                          WHERE EMPLEADO.USUARIO_ID = USUARIO.ID
+                          AND EMPLEADO.ROL_ID = ROL.ID 
+                          AND EMPLEADO.CARGO_ID = CARGO.ID`;
+        return db.query(TABLAS, consulta);
+    }
+
     return {
         todos,
         uno,
         agregar,
-        eliminar
+        eliminar,
+        getEmploys
     }
 }
