@@ -27,7 +27,7 @@ module.exports = function (dbinyectada) {
     }
 
     function getEmploys() {
-        const consulta = 'SELECT * FROM EMPLEADO,USUARIO,ROL,CARGO WHERE ROL.id = USUARIO.IdRol AND USUARIO.IdEmpleado = EMPLEADO.id AND EMPLEADO.IdCargo = CARGO.id';             
+        const consulta = "SELECT * FROM EMPLEADO,USUARIO,ROL,CARGO WHERE ROL.id = USUARIO.IdRol AND USUARIO.IdEmpleado = EMPLEADO.id AND EMPLEADO.IdCargo = CARGO.id";             
         return db.mysql_query(consulta);
     }
 
